@@ -1,9 +1,37 @@
 # STACKS - Social Media Tracker, Analyzer, & Collector Toolkit at Syracuse (v2.0)
-Version 2 of Stacks
+STACKS (v 2.0) is the updated version of the previous STACKS interface (add link here). As of April 2021, STACKS v2.0 has been leveraged with its latest Python v3.9, along with its updated Mongo and PyMongo dependencies. The social media research toolkit was originally designed to collect, process, and store data from online social networks, majorly from social media APIs such as Twitter and Facebook. The interface is an ongoing project via the Syracuse University iSchool, and the following repository supports the Twitter search and pagination API. Collecting from the Facebook search and pagination API is under development.
 
-## Requirements
-Install mongo to Ubuntu 20.04: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+**_This documentation assumes the following:_**
 
-Install Docker to Ubuntu 20.04: https://docs.docker.com/engine/install/
+* You know how to use Ubuntu 20.04.
+* You know how to use ssh.
+* Your server has MongoDB, Docker and Docker Compose already installed.
+* You understand how to edit files using vim (“vi”) or nano.
+* You have rights and know how to install Python libraries.
 
-Install Docker Compose to Ubuntu 20.04: https://docs.docker.com/compose/install/
+
+## Installation
+
+Prior to installing STACK, make sure you have MongoDB, Docker and Docker Compose installed and running on your server.
+
+* Install MongoDB to Ubuntu 20.04: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+* Install Docker to Ubuntu 20.04: https://docs.docker.com/engine/install/
+* Install Docker Compose to Ubuntu 20.04: https://docs.docker.com/compose/install/
+
+## Credits
+
+Lovingly maintained at Syracuse University by:
+
+* [Jeff Hemsley](https://github.com/jhemsley)
+* [Jonathan Stromer-Galley](https://github.com/jstromergalley)
+* [Hrishikesh Telang](https://github.com/hrishitelang)
+* [Yiran Duan](https://github.com/yiran-duan)
+
+
+Distributed under the MIT License:
+
+The MIT License (MIT)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
