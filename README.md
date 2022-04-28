@@ -2,7 +2,6 @@
 STACKS (v 2.0) is the updated version of the previous [STACKS interface](https://github.com/bitslabsyr/stack). As of April 2021, STACKS v2.0 has been leveraged with its latest Python v3.9, along with its updated Mongo and PyMongo dependencies. The social media research toolkit was originally designed to collect, process, and store data from online social networks, majorly from social media APIs such as Twitter and Facebook. The interface is an ongoing project via the Syracuse University iSchool, and the following repository supports the Twitter search and pagination API. Collecting from the Facebook search and pagination API is under development.
 
 **_This documentation assumes the following:_**
-
 * You know how to use Ubuntu 20.04.
 * You know how to use ssh.
 * Your server has MongoDB, Docker and Docker Compose already installed.
