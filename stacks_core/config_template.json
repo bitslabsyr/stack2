@@ -1,0 +1,58 @@
+{
+    "twitter_bearer_token": "<your token>",
+    "log": {"when": "H", "interval": 1},
+    "data": {"when": "H", "interval": 1},
+    "archive": {"when": "H", "interval": 1},
+    "persistance": {
+        "server_name": "<your mongo server>",
+        "port": "<your mongo server port>",
+        "username": "<your mongo username>",
+        "password": "<your mongo password>",
+        "database_name": "<your mongo server database>",
+        "collection_name": "<your mongo server collection>"
+    },
+    "query_rules": [
+        {"value": "#blacklivesmatter", "tag": "BLM"}
+    ],
+    "query_parameters": {
+        "expansions" : [
+            "author_id",
+            "attachments.media_keys"
+        ],
+        "tweet.fields": [
+            "author_id",
+            "conversation_id",
+            "created_at",
+            "geo",
+            "id",
+            "public_metrics",
+            "promoted_metrics",
+            "organic_metrics",
+            "in_reply_to_user_id",
+            "referenced_tweets",
+            "source",
+            "text"
+        ],
+        "user.fields": [
+            "created_at",
+            "description",
+            "entities",
+            "id",
+            "location",
+            "name",
+            "pinned_tweet_id",
+            "url",
+            "username"
+        ],
+        "media.fields": [
+            "media_key",
+            "preview_image_url",
+            "type",
+            "url",
+            "public_metrics",
+            "organic_metrics",
+            "promoted_metrics",
+            "alt_text"
+        ]
+    }
+}

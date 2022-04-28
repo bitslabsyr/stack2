@@ -1,3 +1,11 @@
+## ======================
+## don't upload a real config
+## ======================
+config.json
+stacks_core/config.json
+## ======================
+## ======================
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

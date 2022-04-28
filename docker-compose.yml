@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  collector:
+    build: ./stacks_core
+    image: stacks_collector
+    restart: always
+    entrypoint: /usr/local/bin/python /var/stacks/stacks_core/twitter_streamer.py
+    volumes:
+      - ./logs:/var/stacks/logs
+      - ./data:/var/stacks/data
+    environment:
+      - STACKS_CONFIG=/var/stacks/config.json
+
+  persistor:
+    build: ./stacks_core
+    image: stacks_persistor
+    restart: always
+    entrypoint: /usr/local/bin/python /var/stacks/stacks_core/mongo_loader.py
+    volumes:
+      - ./logs:/var/stacks/logs
+      - ./data:/var/stacks/data
+      - ./data_archive:/var/stacks/data_archive
+    environment:
+      - STACKS_CONFIG=/var/stacks/config.json
