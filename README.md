@@ -17,6 +17,25 @@ Prior to installing STACK, make sure you have MongoDB, Docker and Docker Compose
 * Install Docker on Ubuntu 20.04: https://docs.docker.com/engine/install/
 * Install Docker Compose on Ubuntu 20.04: https://docs.docker.com/compose/install/
 
+
+## Steps on how to use it
+
+The STACKS documentation contains a collector tool by the name of _abcd.py_. Upon opening it, we change the search the following query parameter:
+```
+"query_parameters": {
+            "query": "from:<Insert the Twitter User ID here>",
+            "expansions": "author_id",
+            "tweet.fields": ["author_id", "conversation_id", "created_at", "geo", "id",
+                             "public_metrics", "promoted_metrics", "organic_metrics",
+                             "in_reply_to_user_id", "referenced_tweets", "source", "text"],
+            "user.fields": ["created_at", "description", "entities", "id", "location",
+                            "name", "pinned_tweet_id", "url", "username"],
+            "media.fields": ["media_key", "preview_image_url", "type", "url",
+                             "public_metrics", "organic_metrics", "promoted_metrics", "alt_text"]
+        },
+```
+Hit run and keep the code running until desired time. The data starts getting stored in the MongoDB database accordingly.
+
 ## Credits
 
 Lovingly maintained at Syracuse University by:
