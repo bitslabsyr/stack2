@@ -18,7 +18,7 @@ Prior to installing STACK, make sure you have MongoDB, Docker and Docker Compose
 * Install Docker Compose on Ubuntu 20.04: https://docs.docker.com/compose/install/
 
 
-## Steps on how to use it
+## Steps on how to start the collector
 
 The STACKS documentation contains a collector tool by the name of _abcd.py_. Upon opening it, we change the search the following query parameter:
 ```
@@ -34,7 +34,7 @@ The STACKS documentation contains a collector tool by the name of _abcd.py_. Upo
                              "public_metrics", "organic_metrics", "promoted_metrics", "alt_text"]
         },
 ```
-Hit run and keep the code running until desired time. The data starts getting stored in the MongoDB database accordingly.
+Hit run and keep the code running until desired time. The data starts getting stored in the MongoDB database accordingly. The collector keeps pulling in all the tweet information into ```data["filename"]``` and the log information into ```log["filename"]```.
 
 ## Credits
 
