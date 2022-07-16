@@ -27,9 +27,6 @@ def initialize_info_logger(log_config):
 def push_rows(CTX, rows):
     info_logger = logging.getLogger('Info_Logger')
 
-    server_url = 'mongodb://%s:%s@perseus.ischool.syr.edu'
-    dbase='Stacks'
-
     db_config = CTX["persistance"]
 
     server_name = db_config["server_name"]
