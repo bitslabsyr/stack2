@@ -103,7 +103,7 @@ def main(CTX):
     info_logger.info(json.dumps(CTX))
 
     data_logger_config = CTX["data"]
-    data_logger_config["filename"] = os.path.join(DATA_PATH, "tweets")
+    data_logger_config["filename"] = os.path.join(DATA_PATH, "tweets.log")
     data_logger = initialize_data_logger(data_logger_config)
 
     headers = create_headers(CTX["twitter_bearer_token"])
