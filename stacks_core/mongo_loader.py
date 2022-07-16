@@ -36,7 +36,7 @@ def push_rows(CTX, rows):
     database_name = db_config["database_name"]
     collection_name = db_config["collection_name"]
 
-    server_url = f"mongodb://{username}:{password}@{server_name}"
+    server_url = f"mongodb://{username}:{password}@{server_name}:{port}"
 
     mongoClient= pymongo.MongoClient(server_url)
     mongoDatabase = mongoClient[database_name]
