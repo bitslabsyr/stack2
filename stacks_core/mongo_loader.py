@@ -27,9 +27,6 @@ def initialize_info_logger(log_config):
 def push_rows(CTX, rows):
     info_logger = logging.getLogger('Info_Logger')
 
-    server_url = 'mongodb://%s:%s@perseus.ischool.syr.edu'
-    dbase='Stacks'
-
     db_config = CTX["persistance"]
 
     server_name = db_config["server_name"]
@@ -39,7 +36,7 @@ def push_rows(CTX, rows):
     database_name = db_config["database_name"]
     collection_name = db_config["collection_name"]
 
-    server_url = f"mongodb://{username}:{password}@{server_name}"
+    server_url = f"mongodb://{username}:{password}@{server_name}:{port}"
 
     mongoClient= pymongo.MongoClient(server_url)
     mongoDatabase = mongoClient[database_name]
