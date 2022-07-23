@@ -37,10 +37,10 @@ The STACKS documentation contains a collector tool by the name of _abcd.py_. Upo
 Hit run and keep the code running until desired time. The data starts getting stored in the MongoDB database accordingly. The collector keeps pulling in all the tweet information into ```data["filename"]``` and the log information into ```log["filename"]```.
 
 ## Steps on how to start collecting data
-1. Create your mongo database following mongodb's guide: https://www.mongodb.com/basics/create-database. As noted in the link, the database won't show untill you insert a file, so please add a file manually following the link to have your database shown in mongodb.
-
-2. Make a copy of the ```config_template.json```file from the ```stacks_core```folder and name it ```config.json```, and then modify the fields in the config.json file to fit the tweets you would like to collect. For exmaple, if you want collect tweets about computers, use the word computer as the ```value``` and ```tag``` in ```query_rules```of the ```config.json``` file you just created from copying and pasting ```config_template.json```.
-3.                
+1. Create your mongo database following mongodb's guide: https://www.mongodb.com/basics/create-database. As noted in the mongodb link, the database won't show untill you insert a file, so please add a file manually following the link to have your database shown in mongodb.
+2. Make a copy of the ```config_template.json```file from the ```stacks_core```folder and name it ```config.json```, and then modify the fields in the ```config.json``` file to fit the tweets you would like to collect. For exmaple, if you want collect tweets using the hashtag #computers, use the word computers as the ```value``` and ```tag``` in ```query_rules```of the ```config.json``` file you just created by copying and pasting ```config_template.json```.
+3. If you do not have a Twitter developer account yet, please create one so that you can generate bearer tokens. Once you have a bearer token, copy and paste it to the ```bearer token```field in the ```config.json```file.
+4. If you would like to collect retweets, quoted tweets, or replies, add the following lines to the ```query_rules```in the ```config.json```file: ```"value": "#computers is:retweet", "tag": "computers_retweet"```, ```"value": "#computers is:quote", "tag": "computers_quote"```, ```"value": "#computers is:reply", "tag": "computers_reply"```.     
 
 ## Credits
 
