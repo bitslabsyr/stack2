@@ -37,10 +37,9 @@ The STACKS documentation contains a collector tool by the name of _abcd.py_. Upo
 Hit run and keep the code running until desired time. The data starts getting stored in the MongoDB database accordingly. The collector keeps pulling in all the tweet information into ```data["filename"]``` and the log information into ```log["filename"]```.
 
 ## Steps on how to start collecting data
-First, create your mongo database following mongodb's guide: https://www.mongodb.com/basics/create-database. As noted in the link, the database won't show untill you insert a file, so please add a file manually following the link to have your database shown in mongodb.
+1. Create your mongo database following mongodb's guide: https://www.mongodb.com/basics/create-database. As noted in the link, the database won't show untill you insert a file, so please add a file manually following the link to have your database shown in mongodb.
 
-Second, modify the fields in the config.json file to fit the tweets you would like to collect. 
-For exmaple, 
+2. Make a copy of the ```config_template.json```file in the ```stacks_core```folder, and then modify the fields in the config.json file to fit the tweets you would like to collect. For exmaple, 
 
 ## Credits
 
